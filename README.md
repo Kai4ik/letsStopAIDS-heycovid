@@ -14,7 +14,7 @@
 **Other packages:**
 
 - [react-share](https://www.npmjs.com/package/react-share) - for sharing functionality on desktop (devices where native sharing is not possible)
-- [html-to-image](https://www.npmjs.com/package/html-to-image) - for converting card component into an downloadable image
+- [html-to-image](https://www.npmjs.com/package/html-to-image) - for converting a card component into a downloadable image
 
 ## Data
 
