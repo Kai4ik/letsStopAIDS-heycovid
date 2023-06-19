@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Helvetica Cyrillic';
+  src: local("Helvetica Cyrillic Bold") url('/fonts/Helvetica Cyrillic Bold.otf') format('otf');
+  font-style: bold;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  src: local("Almarai") url('/fonts/Almarai.ttf') format('ttf');
+  font-style: bold;
+  font-weight: 800;
+ 
+}
+
+* {
+  scrollbar-width: thin;  
+  scrollbar-color: rgba(155, 155, 155, 0.3) transparent; /* Thumb and Track color */
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.3);
+  border-radius: 20px;
+  border: transparent;
+}
+
+
+.hamburger {
+    -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainCp from '../components/main';
+import Header from "../components/header";
+
+import "../styles/global.css";
+---
+
+<Layout title="HeyCOVID19 - Information for everyone!">
+	<main class="xl:overflow-hidden xl:h-screen xl:w-screen">
+		<Header  client:load/>	
+		<MainCp  client:load/>
+	</main>
+</Layout>

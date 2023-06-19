@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from "../components/header";
+
+import "../styles/global.css";
+import programLogo from "/src/assets/ProgramLogo.svg";
+---
+
+<Layout title="HeyCOVID19 - Information for everyone!">
+    <main>		
+        <Header  client:load/>	
+        <div class='bg-base-green h-screen'>
+            <div class='h-4/5 w-full'>
+                <div class='h-full w-full flex flex-col md:flex-row items-center justify-center'>
+                    <div class='font-paragraphs text-8xl md:text-16xl xl:text-20xl '>
+                        404
+                    </div>
+                    <div class='mt-10 font-paragraphs ml-8 ' >
+                        <img src={programLogo} alt="Logo" class="w-[190px] lg:w-[380px]" />
+                        <p class='font-bold'>Oooooops!</p>
+                        <p class='font-bold'>Page Not Found!</p>
+                        <p class='mb-4'>This page doesn't exist or was removed.<br/> We suggest you go back home!</p>
+                        <a href="/" class='bg-base-pink text-white ml-14 md:ml-0 p-2 px-3'>Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        ​</div>
+    </main>
+</Layout>

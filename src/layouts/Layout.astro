@@ -1,0 +1,61 @@
+---
+export interface Props {
+	title: string;
+}
+
+
+import "@fontsource/lexend";
+const { title } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />	
+		<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+		<meta name="generator" content={Astro.generator} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="canonical" href="https://heycovid19.letsstopaids.org"/>
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NHKGFGL');</script>
+		<!-- End Google Tag Manager -->
+
+		<title>{title}</title>
+		<meta name="description" content="HeyCOVID19 Version 3.0 promotes youth-friendly, bite-sized facts about COVID19 booster information translated across 25+ languages, so Canadians from all different backgrounds can protect their health.">
+		<meta name="keywords" content="HeyCovid, Hey Covid, LetsStopAIDS, Covid19, Covid, Multilanguage, Covid Information, Covid Languages, Covid accessible, Covid Canada">
+		<link rel="icon" type="image/svg+xml" href="/heycovidfavicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml">
+
+		<meta property="og:title" content={title} />
+		<meta property="og:site_name" content="https://heycovid19.letsstopaids.org"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://heycovid19.letsstopaids.org"/>
+		<meta property="og:image" content="https://heycovid19.letsstopaids.org/Opengraph.jpg">
+		<meta property="og:description" content="HeyCOVID19 Version 3.0 promotes youth-friendly, bite-sized facts about COVID19 booster information translated across 25+ languages, so Canadians from all different backgrounds can protect their health." />
+		
+		<meta name="twitter:card" content="website" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content="HeyCOVID19 Version 3.0 promotes youth-friendly, bite-sized facts about COVID19 booster information translated across 25+ languages, so Canadians from all different backgrounds can protect their health." />
+		<meta name="twitter:image" content="https://heycovid19.letsstopaids.org/Opengraph.jpg" />
+
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHKGFGL"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+</style>
