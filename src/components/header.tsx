@@ -1,7 +1,16 @@
-import programLogo from "/src/assets/ProgramLogo.svg";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+// external modules
+// React specific
 import { useState } from "react";
+
+// animations
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+
+// internal modules
+// components
 import Menu from "./menu";
+
+// local assets
+import programLogo from "/src/assets/ProgramLogo.svg";
 
 export default function Header(): JSX.Element {
   const [isOpen, setOpen] = useState(false);

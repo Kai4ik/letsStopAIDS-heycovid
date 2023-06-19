@@ -1,4 +1,5 @@
 // external modules
+// animations
 import { motion } from "framer-motion";
 
 import {
@@ -11,6 +12,7 @@ import {
 } from "react-icons/fa/index";
 
 // internal modules
+// local assets
 import Card1 from "/src/assets/MenuCard1.png";
 import Card2 from "/src/assets/MenuCard2.png";
 import Card3 from "/src/assets/MenuCard3.png";

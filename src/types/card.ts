@@ -9,7 +9,6 @@ export type CardType = {
   link: string;
 };
 
-// array of cards
 export type CardsDataType = {
   languageLabel: string;
   languageValue: string;

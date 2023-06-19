@@ -1,5 +1,8 @@
 // external modules
+// React specific
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+
+// animations
 import { AnimatePresence } from "framer-motion";
 import { gsap } from "gsap";
 

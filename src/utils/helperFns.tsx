@@ -1,4 +1,4 @@
-// export modules
+// external modules
 import parse from "html-react-parser";
 
 // internal modules
@@ -134,6 +134,7 @@ const emojiMap: Record<string, { path: string; alt: string; styling: string }> =
     },
   };
 
+// replaces default emoji characters with custom emojis created by designer
 export const mapEmojis = (
   title: string
 ): string | JSX.Element | JSX.Element[] => {
@@ -154,6 +155,7 @@ export const mapEmojis = (
   );
 };
 
+// determines background color based on the index of the card
 export const determineBgColor = (index: number): string => {
   return index % 4 === 0
     ? "base-blue"

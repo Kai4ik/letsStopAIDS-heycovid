@@ -2,7 +2,7 @@
 import parse from "html-react-parser";
 import { toPng } from "html-to-image";
 
-// react specific
+// React specific
 import { Dispatch, SetStateAction, useRef, useCallback } from "react";
 import { IoMdDownload } from "react-icons/io/index";
 
@@ -10,6 +10,7 @@ import { IoMdDownload } from "react-icons/io/index";
 import { motion } from "framer-motion";
 
 // internal modules
+// local assets
 import miniFace from "/src/assets/Face.svg";
 import companyLogo from "/src/assets/OrgLogo.svg";
 import programLogo from "/src/assets/ProgramLogo.svg";

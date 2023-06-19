@@ -1,9 +1,8 @@
 // internal modules
-// assets
+// local assets
 import miniFace from "/src/assets/Face.svg";
 import companyLogo from "/src/assets/OrgLogo.svg";
 import programLogo from "/src/assets/ProgramLogo.svg";
-
 import clickme from "/src/assets/Click.svg";
 
 // types

@@ -1,15 +1,19 @@
 // external modules
+// React specific
+import type { SetStateAction, Dispatch } from "react";
 
-// internal modules
+// icons
 import { IoIosCopy, IoLogoWhatsapp } from "react-icons/io/index";
 import { FaFacebookF, FaLinkedin, FaTwitter } from "react-icons/fa/index";
 import { RxCross2 } from "react-icons/rx/index";
-import type { SetStateAction, Dispatch } from "react";
+
+// react-share
 import FacebookShareButton from "react-share/lib/FacebookShareButton";
 import WhatsappShareButton from "react-share/lib/WhatsappShareButton";
 import TwitterShareButton from "react-share/lib/TwitterShareButton";
 import LinkedinShareButton from "react-share/lib/LinkedinShareButton";
 
+// animations
 import { motion } from "framer-motion";
 
 type Props = { setOpenShareModal: Dispatch<SetStateAction<boolean>> };

@@ -1,12 +1,14 @@
 // external modules
+// React specific
 import { useEffect, useState } from "react";
+
+// animations
 import { AnimatePresence } from "framer-motion";
 
 // internal modules
 import jsonData from "../data/data.json";
 
 // components
-import Header from "./header";
 import BannerCp from "./banner";
 import CardsContainer from "./cardsContainer";
 import ShareModal from "./shareModal";
