@@ -185,7 +185,7 @@ export default function ModalCp(props: Props): JSX.Element {
         flex flex-col gap-y-4 3xl:py-16 3xl:px-12 3xl:gap-y-8`}
       >
         <div className="flex justify-between items-center">
-          <h1 className="font-headings font-[800] text-3xl md:text-3xl 3xl:text-5xl">
+          <h1 className="font-headings font-extrabold text-3xl 3xl:text-5xl">
             #HeyCOVID19
           </h1>
           <IoMdDownload
