@@ -1,6 +1,6 @@
 // external modules
 import parse from "html-react-parser";
-import { toPng } from "html-to-image";
+import { toPng, toBlob } from "html-to-image";
 
 // React specific
 import { Dispatch, SetStateAction, useRef, useCallback } from "react";
@@ -69,6 +69,24 @@ export default function ModalCp(props: Props): JSX.Element {
   };
 
   const handleShare = async () => {
+    if (ref.current === null) {
+      return;
+    }
+    const filesArray: File[] = [];
+    toBlob(ref.current, { cacheBust: true }).then(function (blob) {
+      toBlob(ref.current!, {
+        cacheBust: true,
+        filter(domNode: HTMLElement) {
+          if (domNode.classList?.contains("download-icon")) {
+            return false;
+          }
+
+          return true;
+        },
+      }).then(function (blob) {
+        filesArray.push(new File([blob!], "test.png", { type: "image/png" }));
+      });
+    });
     if (navigator.share) {
       const userAgent = navigator.userAgent;
       if (userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Win") > -1) {
@@ -77,6 +95,7 @@ export default function ModalCp(props: Props): JSX.Element {
         await navigator.share({
           text: `HeyCOVID19 Booster Information for All!\n`,
           url: window.location.href,
+          files: filesArray,
         });
       }
     } else {
@@ -161,6 +180,7 @@ export default function ModalCp(props: Props): JSX.Element {
           <IoMdDownload
             data-html2canvas-ignore
             size={22}
+            aria-label="download-btn"
             className="download-icon cursor-pointer pt-1"
             onClick={() => onCapture()}
           />
@@ -234,6 +254,7 @@ export default function ModalCp(props: Props): JSX.Element {
         className="flex justify-center gap-x-5 text-[#F8F6F2] font-paragraphs relative z-40 xl:pb-10 3xl:text-3xl"
       >
         <button
+          aria-label="share-btn"
           className={`px-6 py-2 ${bgColor}`}
           onClick={() => handleShare()}
         >

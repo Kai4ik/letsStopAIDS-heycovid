@@ -48,6 +48,7 @@ export default function ShareModal(props: Props): JSX.Element {
               hashtag="#HeyCovid19"
             >
               <FaFacebookF
+                aria-label="facebook-btn"
                 size={30}
                 className="cursor-pointer transition-colors duration-300 hover:text-base-pink"
               />
@@ -59,6 +60,7 @@ export default function ShareModal(props: Props): JSX.Element {
               className="Demo__some-network__share-button"
             >
               <FaTwitter
+                aria-label="twitter-btn"
                 size={30}
                 className="cursor-pointer transition-colors duration-300 hover:text-base-pink"
               />
@@ -70,6 +72,7 @@ export default function ShareModal(props: Props): JSX.Element {
               className="Demo__some-network__share-button"
             >
               <IoLogoWhatsapp
+                aria-label="whatsapp-btn"
                 size={32}
                 className="cursor-pointer transition-colors duration-300 hover:text-base-pink"
               />
@@ -81,6 +84,7 @@ export default function ShareModal(props: Props): JSX.Element {
               className="Demo__some-network__share-button"
             >
               <FaLinkedin
+                aria-label="linkedin-btn"
                 size={32}
                 className="cursor-pointer transition-colors duration-300 hover:text-base-pink"
               />
@@ -93,7 +97,9 @@ export default function ShareModal(props: Props): JSX.Element {
           onClick={() => navigator.clipboard.writeText(window.location.href)}
         >
           <IoIosCopy size={32} />
-          <p className="text-2xl font-paragraphs ">Copy Link</p>
+          <p className="text-2xl font-paragraphs " aria-label="copy-link-btn">
+            Copy Link
+          </p>
         </div>
       </div>
     </motion.div>

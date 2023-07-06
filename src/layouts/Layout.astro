@@ -12,23 +12,28 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Google Tag Manager -->
+		<script
+      		src={`https://www.googleoptimize.com/optimize.js?id=${process.env.GATSBY_GTM_OPTIMIZE_CONTAINER}`}
+    	></script>
+		<script  key="gtm-container-head">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NHKGFGL');
+		</script>
+		<!-- End Google Tag Manager -->
 		<meta charset="UTF-8" />	
 		<meta http-equiv="x-ua-compatible" content="ie=edge"/>
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="canonical" href="https://heycovid19.letsstopaids.org"/>
 
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-NHKGFGL');</script>
-		<!-- End Google Tag Manager -->
+		
 
 		<title>{title}</title>
 		<meta name="description" content="HeyCOVID19 Version 3.0 promotes youth-friendly, bite-sized facts about COVID19 booster information translated across 25+ languages, so Canadians from all different backgrounds can protect their health.">
-		<meta name="keywords" content="HeyCovid, Hey Covid, LetsStopAIDS, Covid19, Covid, Multilanguage, Covid Information, Covid Languages, Covid accessible, Covid Canada">
+		<meta name="keywords" content="HeyCovid, HeyCovid19, Hey Covid, LetsStopAIDS, Covid19, Covid, Multilanguage, Covid Information, Covid Languages, Covid accessible, Covid Canada">
 		<link rel="icon" type="image/svg+xml" href="/heycovidfavicon.svg" />
 		<link rel="sitemap" href="/sitemap-index.xml">
 
