@@ -92,9 +92,10 @@ export default function ModalCp(props: Props): JSX.Element {
       if (userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Win") > -1) {
         props.setOpenShareModal(true);
       } else {
+        console.log(navigator.canShare({ files: filesArray }));
+        //text: `HeyCOVID19 Booster Information for All!\n`,
+        // url: window.location.href,
         await navigator.share({
-          text: `HeyCOVID19 Booster Information for All!\n`,
-          url: window.location.href,
           files: filesArray,
         });
       }
