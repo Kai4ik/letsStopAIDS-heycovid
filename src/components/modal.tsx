@@ -99,8 +99,6 @@ export default function ModalCp(props: Props): JSX.Element {
             ) {
               await navigator.share({
                 files: filesArray,
-                text: `HeyCOVID19 Booster Information for All!\n`,
-                url: window.location.href,
               });
             } else {
               await navigator.share({
