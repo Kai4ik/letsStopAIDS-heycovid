@@ -72,35 +72,34 @@ export default function ModalCp(props: Props): JSX.Element {
     if (ref.current === null) {
       return;
     }
-    const filesArray: File[] = [];
-    toBlob(ref.current, { cacheBust: true }).then(function (blob) {
-      toBlob(ref.current!, {
-        cacheBust: true,
-        filter(domNode: HTMLElement) {
-          if (domNode.classList?.contains("download-icon")) {
-            return false;
-          }
-
-          return true;
-        },
-      }).then(function (blob) {
-        filesArray.push(new File([blob!], "test.png", { type: blob?.type }));
-      });
-    });
-    console.log(filesArray);
 
     if (navigator.share) {
       const userAgent = navigator.userAgent;
       if (userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Win") > -1) {
         props.setOpenShareModal(true);
       } else {
-        //text: `HeyCOVID19 Booster Information for All!\n`,
-        // url: window.location.href,
-        await navigator.share({
-          files: filesArray,
-          title: "title",
-          text: `HeyCOVID19 Booster Information for All!\n`,
-          url: window.location.href,
+        const filesArray: File[] = [];
+        toBlob(ref.current, { cacheBust: true }).then(function (blob) {
+          toBlob(ref.current!, {
+            cacheBust: true,
+            filter(domNode: HTMLElement) {
+              if (domNode.classList?.contains("download-icon")) {
+                return false;
+              }
+
+              return true;
+            },
+          }).then(async function (blob) {
+            filesArray.push(
+              new File([blob!], "test.png", { type: blob?.type })
+            );
+            await navigator.share({
+              files: filesArray,
+              title: "title",
+              text: `HeyCOVID19 Booster Information for All!\n`,
+              url: window.location.href,
+            });
+          });
         });
       }
     } else {
