@@ -84,19 +84,23 @@ export default function ModalCp(props: Props): JSX.Element {
           return true;
         },
       }).then(function (blob) {
-        filesArray.push(new File([blob!], "test.png", { type: "image/png" }));
+        filesArray.push(new File([blob!], "test.png", { type: blob?.type }));
       });
     });
+    console.log(filesArray);
+
     if (navigator.share) {
       const userAgent = navigator.userAgent;
       if (userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Win") > -1) {
         props.setOpenShareModal(true);
       } else {
-        console.log(navigator.canShare({ files: filesArray }));
         //text: `HeyCOVID19 Booster Information for All!\n`,
         // url: window.location.href,
         await navigator.share({
           files: filesArray,
+          title: "title",
+          text: `HeyCOVID19 Booster Information for All!\n`,
+          url: window.location.href,
         });
       }
     } else {
