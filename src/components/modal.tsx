@@ -93,7 +93,10 @@ export default function ModalCp(props: Props): JSX.Element {
             filesArray.push(
               new File([blob!], "test.png", { type: blob?.type })
             );
-            if (navigator.canShare({ files: filesArray })) {
+            if (
+              navigator.canShare &&
+              navigator.canShare({ files: filesArray })
+            ) {
               await navigator.share({
                 files: filesArray,
                 text: `HeyCOVID19 Booster Information for All!\n`,
