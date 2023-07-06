@@ -93,12 +93,18 @@ export default function ModalCp(props: Props): JSX.Element {
             filesArray.push(
               new File([blob!], "test.png", { type: blob?.type })
             );
-            await navigator.share({
-              files: filesArray,
-              title: "title",
-              text: `HeyCOVID19 Booster Information for All!\n`,
-              url: window.location.href,
-            });
+            if (navigator.canShare({ files: filesArray })) {
+              await navigator.share({
+                files: filesArray,
+                text: `HeyCOVID19 Booster Information for All!\n`,
+                url: window.location.href,
+              });
+            } else {
+              await navigator.share({
+                text: `HeyCOVID19 Booster Information for All!\n`,
+                url: window.location.href,
+              });
+            }
           });
         });
       }
